@@ -1,12 +1,17 @@
 'use client'
 
-import { Center } from '@chakra-ui/react'
+import Navbar from '../Navbar'
+import styles from './styles.module.css'
+import HeaderContents from '../Header/HeaderContents'
 
 function HomeMainPage() {
   return (
-    <>
-      <Center>Home Page</Center>
-    </>
+    <main className={styles.background}>
+      {/* <section className={styles.section}> */}
+        <Navbar />
+        <HeaderContents />
+      {/* </section> */}
+    </main>
   )
 }
 

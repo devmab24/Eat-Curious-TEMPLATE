@@ -12,8 +12,17 @@ import { extendTheme } from '@chakra-ui/react'
         700: '#2a69ac',
         },
     }
+    const font = {
+     fonts: {
+        body: "system-ui, sans-serif",
+        heading: "Georgia, serif, poppins",
+        mono: "Menlo, monospace",
+      },
+    }
 
-    export const theme = extendTheme({ colors })
+
+
+    export const theme = extendTheme({ colors, font })
 
 export function Providers({ 
     children 
