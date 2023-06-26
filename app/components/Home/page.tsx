@@ -1,16 +1,16 @@
 'use client'
 
-import Navbar from '../Navbar'
-import styles from './styles.module.css'
-import HeaderContents from '../Header/HeaderContents'
+import styles from './Home.module.css'
+import AboutUs from '../AboutUs/AboutUs'
+import Features from '../Feautures/Feautres'
+import HeaderLayout from '../Header/HeaderLayout'
 
 function HomeMainPage() {
   return (
-    <main className={styles.background}>
-      {/* <section className={styles.section}> */}
-        <Navbar />
-        <HeaderContents />
-      {/* </section> */}
+    <main className={styles.home}>
+      <HeaderLayout />
+      <AboutUs />
+      <Features />
     </main>
   )
 }

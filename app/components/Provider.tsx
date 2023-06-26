@@ -15,7 +15,7 @@ import { extendTheme } from '@chakra-ui/react'
     const font = {
      fonts: {
         body: "system-ui, sans-serif",
-        heading: "Georgia, serif, poppins",
+        heading: "obviously-narrow, helvetica, sans-serif",
         mono: "Menlo, monospace",
       },
     }
