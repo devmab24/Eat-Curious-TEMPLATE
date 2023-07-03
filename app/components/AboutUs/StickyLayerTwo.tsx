@@ -2,20 +2,21 @@
 
 import { Box, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 
-function LayerTwo() {
+function StickyLayerTwo() {
 
     return (
-        <Box pos="relative" py={10} px={20} bg="#fff6f6" w="100vw" h="100vh">
+        <Box pos="relative" py={10} px={{ base:`${5}`, md:`${20}` }} bg="#fff6f6" w="100vw" h="100vh">
             <Box 
-                pos="absolute"
                 top="0"
-                ml="55em" 
-                mt="5.5em"
                 w="7em" 
                 h="7em"
+                pos="absolute"
+                mt={{ base:'5vh', md:"2em"  }}
+                ml={{ base:'25vw', md:"55em"  }}
             >
-                <Image alt="" src="/twisticon2.png" boxSize="full" /></Box>
-            <Grid templateColumns='repeat(2, 1fr)' gap={6} py={35} alignItems={'center'} textAlign={'center'}>
+                <Image alt="" src="/twistline3.png" boxSize="full" /></Box>
+                
+            <Grid templateColumns={{ md: 'repeat(2, 1fr)' }} gap={6} py={35} alignItems={'center'} textAlign={'center'}>
                 <GridItem maxW="35em" w='100%' h={400}>
                     <Image 
                         alt=""
@@ -42,4 +43,4 @@ function LayerTwo() {
     )
 }
 
-export default LayerTwo
+export default StickyLayerTwo

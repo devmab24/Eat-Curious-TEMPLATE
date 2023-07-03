@@ -2,19 +2,20 @@
 
 import { Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 
-function LayerThree() {
+function StickyLayerThree() {
     return (
-        <Box pos="relative" px={20} bg="#d4ed6d" w="100vw" h="100vh">
+        <Box pos="relative" px={{ base:`${5}`, md:`${20}` }}  bg="#d4ed6d" w="100vw" h="100vh">
             <Box 
-                pos="absolute"
                 top="0" 
-                ml="20em"
-                mt="5em"
-                w="10em" 
                 h="6em"
+                w="10em" 
+                pos="absolute"
+                mt={{ base:'5vh', md:"8em"  }}
+                ml={{ base:'', md:"20em"  }}
             >
-                <Image alt="" src="/twist3.png" boxSize="full" /></Box>
-            <Grid templateColumns='repeat(2, 1fr)' gap={6} py={40} alignItems={'center'} textAlign={'center'}>
+                <Image alt="" src="/twistline4.png" boxSize="full" /></Box>
+                
+            <Grid templateColumns={{ md: 'repeat(2, 1fr)' }} gap={6} py={40} alignItems={'center'} textAlign={'center'}>
                 <GridItem w="100%" maxW="35em" h={300} textAlign="start">
                     <Heading 
                         color="#042f1a"
@@ -29,7 +30,7 @@ function LayerThree() {
                         We’re not crusading or going up against an industry. We’re for; for flavour, for fun, for what’s possible.
                     </Text>
                 </GridItem>
-                <GridItem maxW="35em" w="100%" h={450}>
+                <GridItem maxW="35em" w="100%" h={{ base:'fit-content', md:`${450}`}}>
                     <Image 
                         alt=""
                         boxSize="full"
@@ -41,4 +42,4 @@ function LayerThree() {
     )
 }
 
-export default LayerThree
+export default StickyLayerThree

@@ -2,21 +2,22 @@
 
 import { Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 
-function LayerOne() {
+function StickyLayerOne() {
   return (
     
     <Flex h={'100vh'} bg={"#042f1a"}>
-        <Box pos="relative" py={10} my={30} px={20} bg="#ff73b5" w="100vw" h="100vh">
+        <Box pos="relative" py={10} my={{ base:'', md:`${30}` }} px={{ base:`${5}`, md:`${20}` }} bg="#ff73b5" w="100vw" h="100vh">
             <Box 
-                pos="absolute"
                 top="0" 
-                ml="31em"
-                mt="8em"
                 w="8em" 
                 h="8em"
+                pos="absolute"
+                mt={{ base:'45vh', md:"7em"  }}
+                ml={{ base:'20vw', md:"33em"  }}
             >
-                <Image alt="" src="/twistline.png" boxSize="full" /></Box>
-            <Grid templateColumns='repeat(2, 1fr)' gap={6} py={40} alignItems={'center'} textAlign={'center'}>
+                <Image alt="" src="/twistline2.png" boxSize="full" /></Box>
+            
+            <Grid templateColumns={{ md: 'repeat(2, 1fr)' }} gap={{ base:`${20}`, md:`${6}` }} py={{ base:`${15}`, md:`${40}` }} alignItems={'center'} textAlign={'center'}>
                 <GridItem w="100%" maxW="35em" h={300} textAlign="start">
                     <Heading 
                         color="#042f1a"
@@ -44,4 +45,4 @@ function LayerOne() {
   )
 }
 
-export default LayerOne
+export default StickyLayerOne

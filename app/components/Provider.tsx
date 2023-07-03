@@ -19,10 +19,15 @@ import { extendTheme } from '@chakra-ui/react'
         mono: "Menlo, monospace",
       },
     }
+    const container = {
+      container: {
+         width: "100vw"
+       },
+     }
 
 
 
-    export const theme = extendTheme({ colors, font })
+    export const theme = extendTheme({ colors, font, container })
 
 export function Providers({ 
     children 

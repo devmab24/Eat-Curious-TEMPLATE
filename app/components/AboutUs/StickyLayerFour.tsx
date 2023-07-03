@@ -2,20 +2,23 @@
 
 import { Box, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 
-function LayerFour() {
+function StickyLayerFour() {
 
     return (
-        <Box pos="relative" py={10} px={20} bg="#042f1a" w="100vw" h="100vh">
+        <Box pos="relative" py={10} px={{ base:`${5}`, md:`${20}` }} bg="#042f1a" w="100vw" h="100vh">
             <Box 
-                pos="absolute"
-                bottom="0"
-                ml="60em" 
-                mb="12em"
                 w="7em" 
                 h="7em"
+                pos="absolute"
+                top={{ base:'0'}}
+                my={{ base:`${10}`, md:'' }}
+                ml={{ base:'', md:"60em"  }}
+                mt={{ base:'', md:"20em"  }}
+                bottom={{ base:'', md:"0"  }}
             >
-                <Image alt="" src="/twistline4.png" boxSize="full" /></Box>
-            <Grid templateColumns='repeat(2, 1fr)' gap={6} py={35} alignItems={'center'} textAlign={'center'}>
+                <Image alt="" src="/twistline1.png" boxSize="full" /></Box>
+                
+            <Grid templateColumns={{ md: 'repeat(2, 1fr)' }} gap={6} py={35} alignItems={'center'} textAlign={'center'}>
                 <GridItem maxW="35em" w='100%' h={400}>
                     <Image 
                         alt=""
@@ -42,4 +45,4 @@ function LayerFour() {
     )
 }
 
-export default LayerFour
+export default StickyLayerFour

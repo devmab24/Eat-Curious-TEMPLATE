@@ -1,0 +1,11 @@
+/*About styles*/
+
+.stickyLayer {
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: sticky;
+    background: transparent;
+    justify-content: center;
+  }
