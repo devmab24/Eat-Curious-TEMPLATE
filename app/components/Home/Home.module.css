@@ -67,14 +67,17 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    color: #fefefe;
   }
 
   .headerContent {
     position: relative;
     margin-top: 1em;
+    color: #fefefe;
   }
 
   .headerTitle {
+    color: #fefefe;
     font-weight: 1000;
     font-size: 12em;
     font-family: Arial, sans-serif;
@@ -88,6 +91,7 @@
   }
 
   .headerMind {
+    color: #fefefe;
     position: absolute;
     top: 27em;
   }

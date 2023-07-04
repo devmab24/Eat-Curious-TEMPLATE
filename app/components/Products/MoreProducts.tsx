@@ -5,7 +5,7 @@ import { Box, Center, Heading, SimpleGrid } from '@chakra-ui/react'
 
 function MoreProducts() {
   return (
-    <SimpleGrid pt="2em" p="10px" minChildWidth="300px" spacing={8}>
+    <SimpleGrid pt="2em" p="10px" minChildWidth="300px" spacing={8} color='white'>
         <Link href={'/product'}>
             <Box h="100%" bgImage={'/curious-katsu-1.jpg'} bgSize={'cover'} minH={{ base:"250px", md:`${600}` }} borderRadius='10px'>
                 <Center h="100%">

@@ -7,12 +7,12 @@ import { Hide, Show } from '@chakra-ui/react'
 import { Image, Link } from '@chakra-ui/next-js'
 import ContactMain from '../Contacts/ContactMain'
 import Features from '../Features/Features'
+import Footer from '../Footer'
 
 function HomeMainPage() {
 
   return (
     <div className={styles.container}>
-      {/* Header section */}
       <div>
         {/*Nav Items section*/}
         <Hide below='md'>
@@ -186,6 +186,10 @@ function HomeMainPage() {
       {/* Contact section */}
       <div>
         <ContactMain />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   )
