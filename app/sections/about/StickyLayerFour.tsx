@@ -19,7 +19,7 @@ function StickyLayerFour() {
         pos="relative"
         alignItems="center"
         justifyContent="center"
-        gap={{ base:'3', md:'5' }}
+        gap={{ base:'2', md:'5' }}
         px={{ base: "3rem", sm: "5rem", md: "6rem" }}
         flexDirection={{ base: "column", md: "row-reverse" }}
       >
@@ -27,7 +27,7 @@ function StickyLayerFour() {
           bottom="0"
           pos="absolute"
         //   display={{ base:'none', md:'flex' }}
-          pb={{  base: "20rem", sm: "6rem", md: "2rem" }}
+          pb={{  base: "25rem", sm: "6rem", md: "2rem" }}
           pl={{  base: "2rem", sm: "1rem", md: "30rem" }}
         >
           <Image alt="" src="/twistline1.png" width={150} height={200} />
