@@ -25,7 +25,7 @@ function StickyLayerOne() {
         <Box
           top="0"
           pos="absolute"
-          pt={{  base: "7.6rem", sm: "6rem", md: "5rem" }}
+          pt={{  base: "10rem", sm: "6rem", md: "5rem" }}
           pl={{  base: "2rem", sm: "1rem", md: "2rem" }}
         >
           <Image alt="" src="/twistline2.png" width={100} height={200} />
