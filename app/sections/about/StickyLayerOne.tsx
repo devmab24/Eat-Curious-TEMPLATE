@@ -16,8 +16,8 @@ function StickyLayerOne() {
         h='100%'
         bg="#ff73b5"
         pos="relative"
-        alignItems={{ base:'start', md:"center" }}
-        justifyContent={{ base:'start', md:"center" }}
+        alignItems="center"
+        justifyContent="center"
         gap={{ base:'5', md:'0' }}
         px={{ base: "3rem", sm: "5rem", md: "6rem" }}
         flexDirection={{ base: "column", md: "row" }}
