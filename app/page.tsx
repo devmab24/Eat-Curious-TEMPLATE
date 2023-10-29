@@ -1,7 +1,7 @@
-import HomeMainPage from './components/Home/page'
+import Main from "./sections/Main"
 
-export default function Home() {
-  return ( 
-    <HomeMainPage />
-  )
+function page() {
+  return ( <Main /> );
 }
+
+export default page

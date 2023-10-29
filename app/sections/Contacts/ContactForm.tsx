@@ -1,7 +1,7 @@
 'use client'
 
 import { Container, Flex, Heading } from "@chakra-ui/react"
-import ContactSignupForm from "../dataForms/ContactSignupForm"
+import ContactSignupForm from "../../components/dataForms/ContactSignupForm"
 import SocialMediaLinks from "./SocialMediaLinks"
 
 function ContactForm() {

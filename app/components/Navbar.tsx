@@ -1,68 +1,77 @@
 'use client'
 
-import { motion } from "framer-motion";
-import { Link } from '@chakra-ui/next-js'
-import { keyframes } from "@emotion/react";
-import styles from "./Header/styles.module.css"
-import { Box, Flex, Button, Grid, GridItem } from '@chakra-ui/react'
+import Link from 'next/link';
+import CustomButton from './Button';
+import Headroom from 'react-headroom';
+import { FaBars } from 'react-icons/fa';
+import { Flex, Text, HStack, Box, useMediaQuery, IconButton } from '@chakra-ui/react';
 
-function Navbar() {
+const navLinks = [
+  { href: '/about', label: 'ABOUT' },
+  { href: '/products', label: 'PRODUCTS' },
+  { href: '/', label: 'Eat CURIOUS' },
+  { href: '/recipes', label: 'RECIPES' },
+  { href: '/contacts', label: 'CONTACT US' },
+];
 
-    const marqueeAnimation = keyframes`
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-    `;
+function Nav() {
+  const [isLargerThan768] = useMediaQuery('min-width: 768px');
 
-    return (
-        <Flex pt='8em' bg='#042f1a'>
-            <Grid className={styles.background} templateColumns='repeat(5, 1fr)' gap={6} py={6} alignItems={'center'} textAlign={'center'} fontWeight={'extrabold'}>
-                <Link href='/about'>
-                    <GridItem w='100%' >ABOUT</GridItem>
-                </Link>
-                <Link href='/product'>
-                    <GridItem w='100%' >PRODUCTS</GridItem>
-                </Link>
-                <Link href='/'>
-                    <GridItem w='25'><Box  h='fit-content' lineHeight={'0.8'} fontSize={'50'}>Eat CURIOUS</Box></GridItem>
-                </Link>
-                <Link href='/recipes'>
-                    <GridItem w='100%' >RECIPES</GridItem>
-                </Link>
-                <Link href='/contact'>
-                    <GridItem w='100%' h='10'color='pink.200'>
-                        <Button 
-                            px={4}
-                            py={2}
-                            size="md"
-                            color='#fefe' 
-                            fontWeight='extrabold'
-                            bg={'pink.400'} 
-                            borderRadius="md"
-                            overflow="hidden"
-                            position="relative"
-                            whiteSpace="nowrap"
-                            _hover={{ bg:'pink.400' }}
-                        >
-                                <motion.span
-                                    animate={{ x: [-100, 0] }}
-                                    transition={{ duration: 5, repeat: Infinity, repeatType: "loop" }}
-                                    style={{
-                                        display: "inline-block",
-                                        animation: `${marqueeAnimation} 0.1s linear infinite`,
-                                    }}
-                                >
-                                    CONTACT US
-                                </motion.span>
-                        </Button>
-                    </GridItem>
-                </Link>
-            </Grid>
-        </Flex>
-    )
+  return (
+    <header>
+        <nav>
+            <Headroom>
+                <Flex
+                    w="100%"
+                    zIndex={99}
+                    color="#fff"
+                    align="center"
+                    justifyContent="space-between"
+                    h={{ base:'4rem', md:"6.5rem" }}
+                >
+                    <HStack display={{ base:'none', sm:'none', md:'flex', lg:'flex' }} px={{ base:'1rem', sm:'3rem', md:'4rem', lg:'5rem' }} h="100%" spacing={{ base:`${4}`, sm:`${6}`, md:`${8}`, lg:`${10}` }} w="100%" justifyContent="space-between" alignItems="center">
+                        {navLinks.map((link, index) => (
+                            <Box key={link.label} maxW={index === 2 ? '12rem' : 'inherit'} fontSize='16px' fontWeight="bold">
+                                {link.label === 'CONTACT US' ? (
+                                        <CustomButton label={link.label} colorScheme="teal" />
+                                    ) : (
+                                    <Link href={link.href} passHref>
+                                        <Text
+                                            color="#fff"
+                                            textAlign={index === 2 ? 'center' : 'inherit'}
+                                            fontSize={index === 2 ? '2.5rem' : 'inherit'}
+                                            fontWeight={index === 2 ? 'bold' : 'inherit'}
+                                            lineHeight={index === 2 ? '2rem' : 'inherit'}
+                                        >
+                                            {link.label}
+                                        </Text>
+                                    </Link>
+                                )}
+                            </Box>
+                        ))}
+                    </HStack>
+                    <HStack color="#fff" display={{ base:'flex', sm:'flex', md:'none', lg:'none' }} px={{ base:'1rem', sm:'2rem', md:'3rem', lg:'5rem' }} h="100%" spacing={{ base:`${4}`, sm:`${6}`, md:`${8}`, lg:`${10}` }} w="100%" justifyContent="space-between" alignItems="center">
+                        <Box w='100%' fontWeight="bold" flex="1" textAlign="center">
+                            <Link href='/' passHref>
+                                <Text fontSize='22px' lineHeight='1rem'>
+                                    Eat<br /> CURIOUS
+                                </Text>
+                            </Link>
+                        </Box>
+                        <Box alignItems='flex-end'>
+                            <IconButton
+                                bg="#ff73b5"
+                                colorScheme="teal"
+                                aria-label="Open Menu"
+                                icon={<FaBars color='#000' size={30} />}
+                            />
+                        </Box>
+                    </HStack>
+                </Flex>
+            </Headroom>
+        </nav>
+    </header>
+  );
 }
 
-export default Navbar;
+export default Nav;

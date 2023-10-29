@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+    filter: blur(5px); 
+    opacity: 1; /*display*/
+    transform: translateX(-100%);
+    transition: all 2s;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.parent {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards {
+    transition: transform 1s;
+}
+
+.cards:hover {
+    transform: scale(1.1);
+}
