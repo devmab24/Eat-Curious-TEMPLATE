@@ -24,13 +24,13 @@ function StickyLayerFour() {
         flexDirection={{ base: "column", md: "row-reverse" }}
       >
         <Box
-          top="0"
+          bottom="0"
           pos="absolute"
-          display={{ base:'none', md:'flex' }}
-          pt={{  base: "12rem", sm: "6rem", md: "5rem" }}
+        //   display={{ base:'none', md:'flex' }}
+          pb={{  base: "20rem", sm: "6rem", md: "2rem" }}
           pl={{  base: "2rem", sm: "1rem", md: "30rem" }}
         >
-          <Image alt="" src="/twistline1.png" width={100} height={200} />
+          <Image alt="" src="/twistline1.png" width={150} height={200} />
         </Box>
 
         <Flex
