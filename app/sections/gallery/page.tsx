@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import { Flex } from '@chakra-ui/layout';
 
 const GallerySlides = () => {
     const imageSources = [
@@ -20,31 +21,17 @@ const GallerySlides = () => {
 
     return (
         <section>
-            <div style={{ paddingBottom:'4rem', paddingTop:'4rem' }}>
+            <Flex pb='4rem' pt='4rem' display={[ 'none', 'none', 'flex', 'flex' ]}>
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={8}
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     autoplay={{
-                        delay: 1500,
+                        delay: 1000,
                         disableOnInteraction: false,
                     }}
                     loop={true}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 3,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 5,
-                            spaceBetween: 20,
-                        },
-                        1024: {
-                            slidesPerView: 8,
-                            spaceBetween: 50,
-                        },
-                    }}
                 >
                     {imageSources.map((src, index) => (
                         <SwiperSlide key={index}>
@@ -52,9 +39,43 @@ const GallerySlides = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
+            </Flex>
+            <Flex pb='2rem' pt='2rem' display={[ 'flex', 'flex', 'none', 'none' ]}>
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={3}
+                    // pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 1000,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                >
+                    {imageSources.map((src, index) => (
+                        <SwiperSlide key={index}>
+                            <Image src={src} alt={`img-${index}`} width={100} height={30} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </Flex>
         </section>
     );
 }
 
 export default GallerySlides;
+
+// breakpoints={{
+//     640: {
+//         slidesPerView: 3,
+//         spaceBetween: 20,
+//     },
+//     768: {
+//         slidesPerView: 5,
+//         spaceBetween: 20,
+//     },
+//     1024: {
+//         slidesPerView: 8,
+//         spaceBetween: 50,
+//     },
+// }}
