@@ -1,5 +1,9 @@
+'use client'
+
 import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
+// import Wavify from 'react-wavify';
+// import styles from './style.module.css'
 
 const textStyles = {
   py: [10, 4],
@@ -10,9 +14,20 @@ const textStyles = {
 function StickyLayerOne() {
   return (
     <Container py='10' m="0" p="0" maxW="100%" h="100vh" position="relative">
+      {/* <div className={styles.wave}>
+        <Wavify
+          className={styles.waveSvg}
+          fill="#ff73b5"
+          options={{
+            height: 40,
+            amplitude: 40,
+            speed: 0.15,
+            points: 3,
+          }}
+        />
+      </div> */}
       <Flex
-        
-        w="100vw"
+        w="100%"
         h='100%'
         bg="#ff73b5"
         pos="relative"
