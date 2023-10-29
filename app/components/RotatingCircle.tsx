@@ -1,3 +1,12 @@
+import React from 'react'
+
+function RotatingCircle() {
+  return (
+    <div>RotatingCircle</div>
+  )
+}
+
+export default RotatingCircle
 // 'use client'
 
 // import { motion, isValidMotionProp } from 'framer-motion';
@@ -88,7 +97,7 @@
 // export default RotatingCircle;
 
 
-//As a Prop
+// As a Prop
 
 // import { Box, Container, keyframes } from '@chakra-ui/react';
 // import { motion } from 'framer-motion';
