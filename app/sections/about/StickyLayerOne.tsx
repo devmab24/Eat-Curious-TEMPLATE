@@ -1,13 +1,12 @@
 'use client'
 
-import { Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Container, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 
 function StickyLayerOne() {
   return (
-    
-    <Flex h={'100vh'} bg={"#042f1a"}>
+    <Container m='0' p='0' maxW="100%" h={'100vh'} bg={"#042f1a"}>
         <Box pos="relative" py={10} my={{ base:'', md:`${30}` }} px={{ base:`${5}`, md:`${20}` }} bg="#ff73b5" w="100vw" h="100vh">
-            <Box 
+            {/* <Box 
                 top="0" 
                 w="8em" 
                 h="8em"
@@ -15,7 +14,7 @@ function StickyLayerOne() {
                 mt={{ base:'45vh', md:"7em"  }}
                 ml={{ base:'20vw', md:"33em"  }}
             >
-                <Image alt="" src="/twistline2.png" boxSize="full" /></Box>
+                <Image alt="" src="/twistline2.png" boxSize="full" /></Box> */}
             
             <Grid templateColumns={{ md: 'repeat(2, 1fr)' }} gap={{ base:`${20}`, md:`${6}` }} py={{ base:`${15}`, md:`${40}` }} alignItems={'center'} textAlign={'center'}>
                 <GridItem w="100%" maxW="35em" h={300} textAlign="start">
@@ -41,7 +40,7 @@ function StickyLayerOne() {
                 </GridItem>
             </Grid>
         </Box>
-    </Flex>
+    </Container>
   )
 }
 

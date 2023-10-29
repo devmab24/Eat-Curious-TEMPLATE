@@ -1,4 +1,4 @@
-import Main from "./sections/Main"
+import Main from "./sections/page"
 
 function page() {
   return ( <Main /> );

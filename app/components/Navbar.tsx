@@ -22,7 +22,7 @@ function Nav() {
         <nav>
             <Headroom>
                 <Flex
-                    w="100%"
+                    w="100vw"
                     zIndex={99}
                     color="#fff"
                     align="center"
