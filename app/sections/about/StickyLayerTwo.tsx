@@ -6,7 +6,7 @@ import Image from "next/image";
 const textStyles = {
   py: [10, 4],
   color: "#042f1a",
-  fontSize: "1rem",
+  fontSize: "0.88rem",
 };
 
 function StickyLayerTwo() {
