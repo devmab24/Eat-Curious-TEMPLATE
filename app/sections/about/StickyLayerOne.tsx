@@ -9,16 +9,16 @@ const textStyles = {
 
 function StickyLayerOne() {
   return (
-    <Container m="0" p="0" maxW="100%" h="100vh" position="relative">
+    <Container py='10' m="0" p="0" maxW="100%" h="100vh" position="relative">
       <Flex
-        py='5'
+        
         w="100vw"
         h='100%'
         bg="#ff73b5"
         pos="relative"
         alignItems="center"
         justifyContent="center"
-        gap={{ base:'5', md:'0' }}
+        gap={{ base:'3', md:'0' }}
         px={{ base: "3rem", sm: "5rem", md: "6rem" }}
         flexDirection={{ base: "column", md: "row" }}
       >
@@ -69,25 +69,6 @@ function StickyLayerOne() {
           break the rules – on a mission to redefine food for a new generation.
         </Text>
       </Flex>
-      <style jsx>{`
-        /* Style the wave pseudo-element */
-        .wave {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 50px;
-          background: #ff73b5;
-          background-size: 100% 80px;
-          background-image: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 15px,
-            #042f1a 15px,
-            #042f1a 30px
-          );
-        }
-      `}</style>
     </Container>
   );
 }
