@@ -45,7 +45,7 @@ function Page() {
                         borderRadius="10px"
                         bgImage={card.bgImage}
                         className={styles.cards}
-                        h={{ base:'100%', md:"30rem" }}
+                        h={{ base:'100vh', md:"30rem" }}
                         w={{ base:'100%', md:"17rem" }}
                     >
                         <Heading fontSize="3.8em" fontWeight="1000" lineHeight="0.8em" letterSpacing="tighter" textAlign="center">
