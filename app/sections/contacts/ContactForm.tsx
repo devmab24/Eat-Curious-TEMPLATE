@@ -1,8 +1,8 @@
 'use client'
 
+import SocialMediaLinks from "./SocialMediaLinks"
 import { Container, Flex, Heading, Stack } from "@chakra-ui/react"
 import ContactSignupForm from "../../components/dataForms/ContactSignupForm"
-import SocialMediaLinks from "./SocialMediaLinks"
 
 function ContactForm() {
     return (
@@ -20,7 +20,7 @@ function ContactForm() {
                         feed me more
                     </Heading>
                     <ContactSignupForm /> 
-                    {/* <SocialMediaLinks /> */}
+                    <SocialMediaLinks />
                 </Stack>
             </Flex>
         </Container>

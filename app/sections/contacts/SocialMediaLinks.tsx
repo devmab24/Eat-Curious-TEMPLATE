@@ -1,35 +1,33 @@
 'use client'
-
-import { Link } from "@chakra-ui/next-js"
-import { BsInstagram, BsLinkedin} from "react-icons/bs";
-import { FaFacebookSquare, FaGithub} from "react-icons/fa";
-import { Grid, Container,Box, GridItem, HStack } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/next-js";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { FaFacebookSquare, FaGithub } from "react-icons/fa";
+import { Container, Box, VStack, Stack } from "@chakra-ui/react";
 
 function SocialMediaLinks() {
+  const socialLinks = [
+    { icon: <BsInstagram color='#042f1a' />, href: "https://instagram.com/" },
+    { icon: <FaFacebookSquare color='#042f1a' />, href: "https://web.facebook.com/mohammad.ayuba.5" },
+    { icon: <BsLinkedin color='#042f1a' />, href: "https://www.linkedin.com/in/devmab/" },
+  ];
+
   return (
-    <Container borderTop='2px' borderColor='blackAlpha.300' zIndex={1} maxW='100vw' centerContent>
-        <Grid templateColumns='repeat(5, 1fr)' gap={4} w={'100%'} color='#042f1a'>
-            <GridItem colSpan={2} h='10' columnGap={5}>
-                <HStack>
-                    <Box>
-                        <Link href={"https://instagram.com/"}><BsInstagram color='#042f1a' /></Link>
+    <Container zIndex={1} maxW='100vw' centerContent>
+      <Stack direction={{ base: 'column', md: 'row' }} spacing={4} w={'100%'} color='#042f1a'>
+        <VStack spacing={5}>
+            <Box display='flex' gap='5'>
+                {socialLinks.map((link, index) => (
+                    <Box key={index}>
+                        <Link href={link.href}>{link.icon}</Link>
                     </Box>
-                    <Box>
-                        <Link href="https://web.facebook.com/mohammad.ayuba.5"><FaFacebookSquare color='#042f1a' /></Link>
-                    </Box>
-                    <Box>
-                        <Link href="https://www.linkedin.com/in/devmab/"><BsLinkedin color='#042f1a' /></Link>
-                    </Box>
-                    <Box fontWeight='500'>PRIVACY POLICY</Box>
-                </HStack>
-            </GridItem>
-            <GridItem colStart={4} colEnd={6} h='10'>
-                <Box fontWeight='500'>&copy; EAT CURIOUS 2023 | DESIGNED BY DEV MAB</Box>
-            </GridItem>
-        </Grid>
+                ))}
+            </Box>
+            <Box fontWeight='500'>PRIVACY POLICY</Box>
+            <Box textAlign='center' fontWeight='500'>&copy; EAT CURIOUS 2023 | DESIGNED BY DEV MAB</Box>
+        </VStack>
+      </Stack>
     </Container>
-    
-  )
+  );
 }
 
-export default SocialMediaLinks
+export default SocialMediaLinks;
