@@ -8,7 +8,7 @@ import { Container, Flex, Heading } from "@chakra-ui/react"
 function Services() {
     return (
         <Container p='0' m='0' maxW='100vw'>
-            <Flex gap={5} px={{ base:'1rem', md:'6rem' }} bg={'#042f1a'} w='100%' flexDir='column'>
+            <Flex py={10} gap={5} px={{ base:'1rem', md:'6rem' }} bg={'#042f1a'} w='100%' flexDir='column'>
                 <Heading
                     color='white'
                     textAlign='center'

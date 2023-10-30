@@ -1,10 +1,9 @@
 'use client'
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import styles from './styles.module.css';
 import { Box, Flex, Container } from '@chakra-ui/react';
 import { useInView } from 'react-intersection-observer';
-import Link from 'next/link';
 
 function Page() {
     const { ref: myRef, inView: myElementIsVisible } = useInView();
@@ -33,6 +32,10 @@ function Page() {
             scale: 1,
             transition: { duration: 0.5, delay: index * 0.5 },
         }),
+        hover: {
+            scale: 1.1, // Scale up to 1.1 when hovered
+            transition: { duration: 0.2 },
+        },
     };
 
     return (
@@ -62,9 +65,9 @@ function Page() {
                             initial="hidden"
                             animate={myElementIsVisible ? 'visible' : 'hidden'}
                             key={index}
+                            whileHover="hover"
                         >
                             <Link href={card.href} style={{
-                                borderRadius: '10px',
                                 position: 'relative',
                                 overflow: 'hidden',
                             }}>
@@ -73,7 +76,6 @@ function Page() {
                                     borderRadius="10px"
                                     bgImage={card.bgImage}
                                     backgroundSize="cover"
-                                    className={styles.cards}
                                     backgroundPosition="center"
                                     backgroundRepeat="no-repeat"
                                     h={{ base:'35rem', md:"30rem" }}
