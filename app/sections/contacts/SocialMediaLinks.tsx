@@ -7,9 +7,9 @@ import { Grid, Container,Box, GridItem, HStack } from "@chakra-ui/react"
 
 function SocialMediaLinks() {
   return (
-    <Container pt={5} px={20} my={10} borderTop='2px' borderColor='blackAlpha.300' zIndex={1} maxW='100vw' centerContent>
+    <Container borderTop='2px' borderColor='blackAlpha.300' zIndex={1} maxW='100vw' centerContent>
         <Grid templateColumns='repeat(5, 1fr)' gap={4} w={'100%'} color='#042f1a'>
-            <GridItem px={10} colSpan={2} h='10' columnGap={5}>
+            <GridItem colSpan={2} h='10' columnGap={5}>
                 <HStack>
                     <Box>
                         <Link href={"https://instagram.com/"}><BsInstagram color='#042f1a' /></Link>

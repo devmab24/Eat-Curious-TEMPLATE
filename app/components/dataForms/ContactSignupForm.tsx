@@ -9,7 +9,7 @@ import {
 
 export default function Signup() {
   return (
-    <Stack spacing={4} direction={{ base: 'column', md: 'row' }} w={'full'} px={10}>
+    <Stack spacing={4} direction={{ base: 'column', md: 'row' }} w={'full'} px={{ base:'2', md:'10' }}>
       <Input
         type={'text'}
         placeholder={'FULL NAME'}
