@@ -20,7 +20,7 @@ function ContactForm() {
                         feed me more
                     </Heading>
                     <ContactSignupForm /> 
-                    <Divider />
+                    <Divider py='5' />
                     <SocialMediaLinks />
                 </Stack>
             </Flex>
