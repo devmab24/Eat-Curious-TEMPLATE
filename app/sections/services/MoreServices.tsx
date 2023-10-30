@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import styles from './styles.module.css';
 import { Link } from '@chakra-ui/next-js';
@@ -25,36 +27,56 @@ function Page() {
         },
     ];
 
+    const cardVariants = {
+        hidden: { scale: 0 },
+        visible: (index: number) => ({
+            scale: 1,
+            transition: { duration: 0.5, delay: index * 0.5 }, // Adjust the delay timing as needed
+        }),
+    };
+
     return (
-        <Flex
-            gap={5}
-            w="100%"
-            wrap="wrap"
+        <motion.div
             ref={myRef}
-            color="white"
-            align='center'
-            justifyContent='space-between'
-            flexDir={{ base: 'column', md: 'row' }}
-            className={`${styles.container} ${myElementIsVisible ? styles.animate : ''}`}
+            initial="hidden"
+            animate={myElementIsVisible ? 'visible' : 'hidden'}
         >
-            {cards.map((card, index) => (
-                <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent} key={index}>
-                    <Box
-                        flex="1"
-                        bgSize="cover"
-                        borderRadius="10px"
-                        bgImage={card.bgImage}
-                        className={styles.cards}
-                        h={{ base:'100vh', md:"30rem" }}
-                        w={{ base:'100%', md:"17rem" }}
+            <Flex
+                gap={5}
+                w="100%"
+                wrap="wrap"
+                color="white"
+                align="center"
+                justifyContent="space-between"
+                flexDir={{ base: 'column', md: 'row' }}
+            >
+                {cards.map((card, index) => (
+                    <motion.div
+                        custom={index}
+                        variants={cardVariants}
+                        initial="hidden"
+                        animate={myElementIsVisible ? 'visible' : 'hidden'}
+                        key={index}
                     >
-                        <Heading fontSize="3.8em" fontWeight="1000" lineHeight="0.8em" letterSpacing="tighter" textAlign="center">
-                            {card.title}
-                        </Heading>
-                    </Box>
-                </Link>
-            ))}
-        </Flex>
+                        <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent}>
+                            <Box
+                                flex="1"
+                                h="30rem"
+                                bgSize="cover"
+                                borderRadius="10px"
+                                bgImage={card.bgImage}
+                                className={styles.cards}
+                                w={{ base: '100%', md: '17rem' }}
+                            >
+                                <Heading fontSize="3.8em" fontWeight="1000" lineHeight="0.8em" letterSpacing="tighter" textAlign="center">
+                                    {card.title}
+                                </Heading>
+                            </Box>
+                        </Link>
+                    </motion.div>
+                ))}
+            </Flex>
+        </motion.div>
     );
 }
 
