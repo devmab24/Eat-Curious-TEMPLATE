@@ -41,12 +41,12 @@ function Page() {
                 <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent} key={index}>
                     <Box
                         flex="1"
-                        w="17rem"
                         h="30rem"
                         bgSize="cover"
                         borderRadius="10px"
                         bgImage={card.bgImage}
                         className={styles.cards}
+                        w={{ base:'100%', md:"17rem" }}
                     >
                         <Heading fontSize="3.8em" fontWeight="1000" lineHeight="0.8em" letterSpacing="tighter" textAlign="center">
                             {card.title}
