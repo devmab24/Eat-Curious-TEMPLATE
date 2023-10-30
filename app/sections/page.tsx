@@ -4,6 +4,7 @@ import About from "./about/page"
 import GallerySlides from "./gallery/page"
 import Hero from "./hero/page"
 import Services from "./services/page"
+import Footer from "./Footer/Footer"
 
 function Main() {
   return (
@@ -23,6 +24,9 @@ function Main() {
         </section>
         <section>
           <Services />
+        </section>
+        <section>
+          <Footer />
         </section>
     </main>
   )
