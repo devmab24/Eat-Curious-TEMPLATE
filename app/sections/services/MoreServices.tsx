@@ -68,6 +68,7 @@ function Page() {
                                 backgroundRepeat="no-repeat"
                                 bgImage={`url(${card.bgImage})`}
                                 w={{ base: '100%', md: '17rem' }}
+                                h={{ base:'100vh', md:"30rem" }}
                                 minH={{ base:'100vh', md:"30rem" }}
                             >
                             </Box>
