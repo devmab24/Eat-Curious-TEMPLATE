@@ -8,7 +8,7 @@ function ContactForm() {
     return (
         <Container m='0' p='0' zIndex={1} maxW="100vw" centerContent>
             <Flex bg="#ff73b5" w='100%' h='100%' px={{ base:'2', md:'10' }}>
-                <Stack spacing={10} w='100%' py='10'>
+                <Stack spacing={10} w='100%' pt='10'>
                     <Heading
                         textAlign='center'
                         color='#042f1a'
