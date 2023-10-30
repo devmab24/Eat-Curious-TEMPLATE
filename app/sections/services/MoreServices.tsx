@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './styles.module.css';
 import { Link } from '@chakra-ui/next-js';
 import { useInView } from 'react-intersection-observer';
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box, Heading, Flex, Container } from '@chakra-ui/react';
 
 function Page() {
     const { ref: myRef, inView: myElementIsVisible } = useInView();
@@ -52,43 +52,45 @@ function Page() {
             ref={myRef}
             initial="hidden"
             animate={myElementIsVisible ? 'visible' : 'hidden'}
-            // variants={parentVariants}
-            // className={`${styles.container}`}
         >
-            <Flex
+            <Container
                 gap={5}
-                w="100%"
-                wrap="wrap"
-                color="white"
-                align="center"
-                justifyContent="space-between"
-                flexDir={{ base: 'column', md: 'row' }}
-            >
-                {cards.map((card, index) => (
-                    <motion.div
-                        custom={index}
-                        variants={cardVariants}
-                        initial="hidden"
-                        animate={myElementIsVisible ? 'visible' : 'hidden'}
-                        key={index}
-                    >
-                        <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent}>
-                            <Box
-                                flex="1"
-                                borderRadius="10px"
-                                bgImage={card.bgImage}
-                                backgroundSize="cover"
-                                className={styles.cards}
-                                backgroundPosition="center"
-                                backgroundRepeat="no-repeat"
-                                h={{ base:'100vh', md:"30rem" }}
-                                w={{ base: 'sm', md: '17rem' }}
-                            >
-                            </Box>
-                        </Link>
-                    </motion.div>
-                ))}
-            </Flex>
+                maxW="100vw"
+                justifyContent="center"
+                >
+                <Flex 
+                    gap={'10'}
+                    wrap="wrap"
+                    color="white"
+                    justifyContent="space-between"
+                    flexDir={{ base: 'column', md: 'row' }}
+                >
+                    {cards.map((card, index) => (
+                        <motion.div
+                            custom={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            animate={myElementIsVisible ? 'visible' : 'hidden'}
+                            key={index}
+                        >
+                            <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent}>
+                                <Box
+                                    flex="1"
+                                    borderRadius="10px"
+                                    bgImage={card.bgImage}
+                                    backgroundSize="cover"
+                                    // className={styles.cards}
+                                    backgroundPosition="center"
+                                    backgroundRepeat="no-repeat"
+                                    h={{ base:'100vh', md:"30rem" }}
+                                    w={{ base: '100%', md: '17rem' }}
+                                >
+                                </Box>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </Flex>
+            </Container>
         </motion.div>
     );
 }
