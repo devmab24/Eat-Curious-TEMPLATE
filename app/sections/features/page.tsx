@@ -59,8 +59,8 @@ function Features() {
 
   return (
     <Box display="flex" flexDir="column" alignItems="center" py={10} px={{ base: `${5}`, md: `${20}` }} bg="#fff6f6" w="100vw">
-      <Heading fontSize={{ base: '2em', md: '3em' }} lineHeight="0.82em" fontWeight="1000" textAlign="center" p="0.2em" w="100%" color="#042f1a">
-        FEATURES & BENEFITS
+      <Heading fontSize={{ base: '2em', md: '3em' }} lineHeight="0.82em" fontWeight="800" textAlign="center" p="0.2em" w="100%" color="#042f1a">
+        FEATURES &<br/> BENEFITS
       </Heading>
 
         <Flex flexDir={{ base: 'column', md: 'row' }} gap={6} py={35} alignItems="center" justify="space-around">
@@ -70,13 +70,12 @@ function Features() {
                     border="none" 
                     bg="#fff6f6" 
                     key={index} 
-                    w={{ base: '15rem', md: '13rem' }} 
+                    w={{ base: '15rem', md: '14rem' }} 
                     minH="22rem" 
-                    p={{ base: '6', md: '4' }}
                 >
                     <VStack spacing={4}>
                         <Image alt="" boxSize="10em" src={feature.imageSrc} />
-                        <Heading fontWeight="1000" fontSize="1rem" color="#042f1a">
+                        <Heading fontWeight="600" fontSize="1rem" color="#042f1a">
                             {feature.title}
                         </Heading>
                         <Text textAlign="center" color="#042f1a">
