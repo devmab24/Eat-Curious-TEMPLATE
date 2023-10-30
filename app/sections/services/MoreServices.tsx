@@ -61,16 +61,15 @@ function Page() {
                         <Link href={card.href} _hover={{ textDecoration: 'none' }} className={styles.parent}>
                             <Box
                                 flex="1"
-                                h="30rem"
-                                bgSize="cover"
                                 borderRadius="10px"
-                                bgImage={card.bgImage}
+                                backgroundSize="cover"
                                 className={styles.cards}
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                bgImage={`url(${card.bgImage})`}
                                 w={{ base: '100%', md: '17rem' }}
+                                minH={{ base:'100vh', md:"30rem" }}
                             >
-                                <Heading fontSize="3.8em" fontWeight="1000" lineHeight="0.8em" letterSpacing="tighter" textAlign="center">
-                                    {card.title}
-                                </Heading>
                             </Box>
                         </Link>
                     </motion.div>
