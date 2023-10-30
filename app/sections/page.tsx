@@ -5,7 +5,6 @@ import GallerySlides from "./gallery/page"
 import Hero from "./hero/page"
 import Services from "./services/page"
 import Footer from "./Footer/Footer"
-import Contact from "./contacts/page"
 
 function Main() {
   return (
@@ -26,9 +25,6 @@ function Main() {
         <section>
           <Services />
         </section>
-        {/* <section>
-          <Contact />
-        </section> */}
         <section>
           <Footer />
         </section>
