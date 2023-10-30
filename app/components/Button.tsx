@@ -10,7 +10,7 @@ interface CustomButtonProps {
 
 const CustomButton: React.FC<CustomButtonProps> = ({ label, colorScheme }) => {
     return (
-        <ChakraButton bg="#ff73b5" _hover={{ bg:"#ff73b5" }} colorScheme={colorScheme} color='#000' fontWeight="extrabold" size="sm" fontSize='16px'>
+        <ChakraButton bg="#ff73b5" _hover={{ bg:"#ff73b5" }} colorScheme={colorScheme} color="#042f1a" fontWeight="extrabold" w='fit-content' size="sm" fontSize='16px'>
             {label}
         </ChakraButton>
     );

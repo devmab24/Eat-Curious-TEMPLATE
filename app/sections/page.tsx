@@ -3,6 +3,7 @@ import Features from "./features/page"
 import About from "./about/page"
 import GallerySlides from "./gallery/page"
 import Hero from "./hero/page"
+import Services from "./services/page"
 
 function Main() {
   return (
@@ -19,6 +20,9 @@ function Main() {
         </section>
         <section>
           <Features />
+        </section>
+        <section>
+          <Services />
         </section>
     </main>
   )
