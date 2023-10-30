@@ -1,5 +1,4 @@
 .container {
-    /* width: 100%; */
     filter: blur(5px); 
     opacity: 1; /*display*/
     transform: translateX(-100%);
