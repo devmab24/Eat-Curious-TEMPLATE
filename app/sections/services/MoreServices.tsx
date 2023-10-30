@@ -6,7 +6,7 @@ import { Link } from '@chakra-ui/next-js'
 import { useInView } from 'react-intersection-observer';
 import { Box, Center, Heading, SimpleGrid, keyframes } from '@chakra-ui/react'
 
-function MoreProducts() {
+function Page() {
 
     const { ref: myRef, inView: myElementIsVisible } = useInView();
 
@@ -71,4 +71,4 @@ function MoreProducts() {
   )
 }
 
-export default MoreProducts
+export default Page

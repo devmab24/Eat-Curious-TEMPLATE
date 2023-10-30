@@ -1,9 +1,9 @@
 'use client'
 
-import ServicesOptions from "./ServicesOptions"
 import ServicesCard from "./ServicesCard"
-import MoreProducts from "./MoreProducts"
-import { Center, Container, Flex, Heading } from "@chakra-ui/react"
+import MoreServices from "./MoreServices"
+import ServicesOptions from "./ServicesOptions"
+import { Container, Flex, Heading } from "@chakra-ui/react"
 
 function Services() {
     return (
@@ -17,12 +17,10 @@ function Services() {
                     textTransform={'uppercase'}
                     textDecorationStyle={'wavy'}
                     fontSize={{ base:'3rem', md:'5rem' }}
-                >
-                    drooling yet?
-                </Heading>
+                >drooling yet?</Heading>
                 <ServicesCard />
                 <ServicesOptions />
-                {/*<MoreProducts /> */}
+                <MoreServices />
             </Flex>
         </Container>
     )
