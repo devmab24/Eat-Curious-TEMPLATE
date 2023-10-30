@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './styles.module.css';
 import { Link } from '@chakra-ui/next-js';
 import { useInView } from 'react-intersection-observer';
-import { Box, Heading, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 function Page() {
     const { ref: myRef, inView: myElementIsVisible } = useInView();
@@ -31,7 +31,7 @@ function Page() {
         hidden: { scale: 0 },
         visible: (index: number) => ({
             scale: 1,
-            transition: { duration: 0.5, delay: index * 0.5 }, // Adjust the delay timing as needed
+            transition: { duration: 0.5, delay: index * 0.5 },
         }),
     };
 
