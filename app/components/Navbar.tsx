@@ -23,7 +23,7 @@ function Nav() {
             <Headroom>
                 <Flex
                     w="100vw"
-                    zIndex={99}
+                    zIndex={999}
                     color="#fff"
                     align="center"
                     justifyContent="space-between"
