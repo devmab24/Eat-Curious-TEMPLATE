@@ -37,7 +37,7 @@ function Footer() {
           initial={{ x: '100%' }}
           animate={{ x: '-100%' }}
           transition={{
-            duration: 25,
+            duration: 15,
             repeat: Infinity,
             ease: 'linear',
           }}
