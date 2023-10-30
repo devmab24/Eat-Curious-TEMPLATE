@@ -26,7 +26,6 @@ function StickyLayerFour() {
         <Box
           bottom="0"
           pos="absolute"
-        //   display={{ base:'none', md:'flex' }}
           pb={{  base: "25rem", sm: "6rem", md: "2rem" }}
           pl={{  base: "2rem", sm: "1rem", md: "30rem" }}
         >

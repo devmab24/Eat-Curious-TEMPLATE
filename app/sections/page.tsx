@@ -1,4 +1,5 @@
 import Nav from "../components/Navbar"
+import Features from "./features/page"
 import About from "./about/page"
 import GallerySlides from "./gallery/page"
 import Hero from "./hero/page"
@@ -15,6 +16,9 @@ function Main() {
         </section>
         <section>
           <About />
+        </section>
+        <section>
+          <Features />
         </section>
     </main>
   )
