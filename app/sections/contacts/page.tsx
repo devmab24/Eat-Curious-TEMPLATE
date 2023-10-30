@@ -5,7 +5,7 @@ import ContactForm from './ContactForm'
 import { Flex } from '@chakra-ui/react'
 import styles from './styles.module.css'
 
-function ContactMain() {
+function Contact() {
   return (
     <Flex bg="#fff6f6" w='100vw' h={'fit-content'} flexDir='column'>
       <Flex className={styles.sticky} style={{ zIndex: 1 }}>
@@ -18,4 +18,4 @@ function ContactMain() {
   )
 }
 
-export default ContactMain
+export default Contact

@@ -26,11 +26,11 @@ function Footer() {
       <Box
         h="100%"
         w="100%"
-        fontSize="1.5em"
         color="#042f1a"
         fontWeight="1000"
         textAlign="center"
         overflow="hidden"
+        fontSize={{ base:'0.9rem', md:"1.5em" }}
       >
         <motion.div
           className={styles.marquee}
