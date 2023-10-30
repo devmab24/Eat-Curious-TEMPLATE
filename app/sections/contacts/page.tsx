@@ -7,7 +7,7 @@ import styles from './styles.module.css'
 
 function Contact() {
   return (
-    <Flex bg="#fff6f6" w='100%' flexDir='column'>
+    <Flex h='fit-content' bg="#fff6f6" w='100%' flexDir='column'>
       <Flex className={styles.sticky} style={{ zIndex: 1 }}>
         <ChatSection />
       </Flex>

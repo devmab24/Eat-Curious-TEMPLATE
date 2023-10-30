@@ -23,9 +23,9 @@ function SocialMediaLinks() {
                     </Box>
                 ))}
             </Box>
-            <Box fontSize={{ base:'0.6rem', md:'1rem' }} fontWeight='600'>PRIVACY POLICY</Box>
-            <Box fontSize={{ base:'0.6rem', md:'1rem' }} fontWeight='600'>&copy; EAT CURIOUS 2023</Box>
-            <Box fontSize={{ base:'0.6rem', md:'1rem' }} textAlign='center' fontWeight='600'>DESIGNED BY DEV MAB</Box>
+            <Box fontSize={{ base:'0.8rem', md:'1rem' }} fontWeight='600'>PRIVACY POLICY</Box>
+            <Box fontSize={{ base:'0.8rem', md:'1rem' }} fontWeight='600'>&copy; EAT CURIOUS 2023</Box>
+            <Box fontSize={{ base:'0.8rem', md:'1rem' }} textAlign='center' fontWeight='600'>DESIGNED BY DEV MAB</Box>
         </VStack>
       </Stack>
     </Container>
