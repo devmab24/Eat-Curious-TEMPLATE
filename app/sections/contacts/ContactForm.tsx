@@ -1,13 +1,13 @@
 'use client'
 
 import SocialMediaLinks from "./SocialMediaLinks"
-import { Container, Flex, Heading, Stack } from "@chakra-ui/react"
+import { Container, Divider, Flex, Heading, Stack } from "@chakra-ui/react"
 import ContactSignupForm from "../../components/dataForms/ContactSignupForm"
 
 function ContactForm() {
     return (
         <Container m='0' p='0' zIndex={1} maxW="100vw" centerContent>
-            <Flex bg="#ff73b5" w='100%' h='100%' px={{ base:'2', md:'10' }}>
+            <Flex bg="#ff73b5" w='100%' h='100%' >
                 <Stack spacing={10} w='100%' pt='10'>
                     <Heading
                         textAlign='center'
@@ -20,6 +20,7 @@ function ContactForm() {
                         feed me more
                     </Heading>
                     <ContactSignupForm /> 
+                    <Divider />
                     <SocialMediaLinks />
                 </Stack>
             </Flex>
