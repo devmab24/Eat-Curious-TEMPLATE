@@ -1,39 +1,22 @@
 'use client'
 
-import { Image } from '@chakra-ui/next-js'
-import { Box, Button, Center, Flex, Heading } from '@chakra-ui/react'
+import Image from 'next/image'
+import CustomButton from '@/app/components/Button'
+import { Box, Flex, Heading } from '@chakra-ui/react'
 
 function ChatSection() {
     return (
-        <Flex position='relative' w='100%' h='100vh' flexDir={'column'} align='center'>
-            <Box mt={40}>
-                <Heading fontSize={'5em'} fontWeight={'1000'} letterSpacing='tight' color='#042f1a'>INTRIGUED?</Heading>
-                <Center w='100%'>
-                    <Button 
-                        zIndex={1}
-                        bg={"#ff73b5"}
-                        color='#042f1a'
-                        fontSize={'1em'}
-                        fontWeight={'1000'}
-                        textTransform={'uppercase'}
-                        _hover={{ bg:"#ff73b5" }}
-                    >
-                        let&rsquo;s chat</Button>
-                </Center>
+        <Flex pt={10} w='100%' h='100vh' flexDir={'column'} align='center'>
+            <Box py='5' gap='5' flexDir='column' display='flex' justifyContent='center' alignItems='center'>
+                <Heading fontSize={'3.5em'} fontWeight={'1000'} letterSpacing='tight' color='#042f1a'>INTRIGUED?</Heading>
+                <CustomButton label='LET&rsquo;S CHAT' colorScheme=''/>
             </Box>
             
             <Box>
                 <Image
                     alt=''
-                    top={0}
-                    left={0}
-                    right={0}
-                    bottom={0}
                     width={350}
                     height={350}
-                    mx={'32em'}
-                    mt={'15em'}
-                    position='absolute'
                     src={'/chat-home.svg'}
                 />
             </Box>
